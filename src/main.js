@@ -1,13 +1,8 @@
 // query selector variables go here 👇
 var posterTitle = document.querySelector('.poster-title');
-
 var posterImage = document.querySelector('.poster-img');
-
 var posterQuote = document.querySelector('.poster-quote');
-
-var showRandomPosterButton = document.querySelector('.show-random')
-
-
+var showRandomPosterButton = document.querySelector('.show-random');
 
 // we've provided you with some data to work with 👇
 var images = [
@@ -115,7 +110,6 @@ var currentPoster;
 showRandomPosterButton.addEventListener('click', displayRandomPoster)
 
 // functions and event handlers go here 👇
-// (we've provided two to get you started)!
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
