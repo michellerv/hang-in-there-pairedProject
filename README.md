@@ -22,7 +22,20 @@ Michelle Villagran: https://github.com/michellerv
 Renee Pinna: https://github.com/reneepinna
 
 ### Learning Goals:
-[//]: <> (What were the learning goals of this project? What tech did you work with?)
+- Continue to practice creating DRY and readable JavaScript. Practice the single responsibility principle (SRP) in our functions to ensure functionality and simplicitiy. 
+- Learned how to use the DOM to manipulate HTML and CSS, enabling application functionality. 
+- Learn more HTML and CSS language markers, in order to recognize which parts of the code are connected to which parts of the application.
+- Create event listeners to make a more interactive application.
+- Practice communicating, as well as giving and receiving feedback from a teammate. Making sure everyones ideas feel heard, and any concerns are addressed before moving forward. 
+- Practicing a consistent Git workflow to save work and stay on the same page. 
 
 ### Wins + Challenges:
-[//]: <> (What are 2-3 wins you have from this project? What were some challenges you faced - and how did you get over them?)
+#### Wins
+- Great open communication, and strong collaboration between teammates. 
+- Enabling the application to have functionality despite not knowing most concepts. 
+- Able to support and collaborate with other teams and creating a safe environment to do so. 
+
+#### Challenges
+- The deleting posters functionality took the longest to collaborate on, and was achieved through help from others. Without others' insights and prior knowledge, we are unsure if we would have achieved functionality.
+- We still need to practice taking more breaks, as well as tracking the time of unproductive struggle. There were only a few times that happened, but the times it did caused us to spend multiple hours on one aspect of the application functionality.  
+
