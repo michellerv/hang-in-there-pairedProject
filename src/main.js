@@ -128,16 +128,14 @@ makePosterButton.addEventListener('click', displayForm);
 takeMeBackButton.addEventListener('click', goToMain);
 showSavedButton.addEventListener('click', displaySavedPosters);
 backToMainButton.addEventListener('click', goToMain);
+savePosterButton.addEventListener('click', savePoster);
 showMyPosterButton.addEventListener('click', function(e){
   e.preventDefault();
   createOwnPoster();
 });
-savePosterButton.addEventListener('click', savePoster);
 savedPosterGrid.addEventListener('dblclick', function(event) {
   deletePoster(event)
  });
-
-
 
 // functions and event handlers go here 👇
 function getRandomIndex(array) {
@@ -158,10 +156,9 @@ function displayRandomPoster() {
   var randomTitle = titles[getRandomIndex(titles)];
   var randomQuote = quotes[getRandomIndex(quotes)];
 
-  var poster = createPoster(randomImage, randomTitle, randomQuote);
-  currentPoster = poster;
+  currentPoster = createPoster(randomImage, randomTitle, randomQuote);
 
-  renderPoster(poster);
+  renderPoster(currentPoster);
 }
 
 function displayForm() {
@@ -177,8 +174,10 @@ function goToMain() {
 
 function displaySavedPosters() {
   savedPosterGrid.innerHTML = ''
+  
   mainPoster.classList.add('hidden');
   savedPosterPage.classList.remove('hidden');
+
   for (var i = 0; i < savedPosters.length; i++) {
     savedPosterGrid.innerHTML +=
     `<article class='mini-poster' id = '${savedPosters[i].id}'>
@@ -196,7 +195,7 @@ function createOwnPoster() {
   titles.push(poster.title);
   quotes.push(poster.quote);
 
-  renderPoster(poster);
+  renderPoster(currentPoster);
   clearForm();
   goToMain();
 }
