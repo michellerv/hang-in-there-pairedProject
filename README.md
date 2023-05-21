@@ -11,7 +11,7 @@ Sometimes, we feel sad. What better way to feel more joy than creating or discov
 3. Open the webpage by typing `open index.html`
 
 ### Preview of App:
-![Screenshot of save posters page](https://file%2B.vscode-resource.vscode-cdn.net/Users/michellevillagran/Turing/Mod1/projects/hang-in-there-pairedProject/readme-imgs/Screen%20Shot%202023-05-21%20at%209.23.54%20AM.png?version%3D1684683280325)
+![Screenshot of save posters page](/readme-imgs/savedposterpage.png)
 The saved posters page allows users to keep their favorite posters. They can also save the posters they created using the make your own poster form. The poster on the right is a saved unique poster that used the form to input the picture, title, and quote. 
 
 ### Context:
