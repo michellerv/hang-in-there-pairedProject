@@ -1,7 +1,9 @@
 # Hang in There  
+A motivational poster experience.
 
 ### Abstract:
-[//]: <> (Briefly describe what you built and its features. What problem is the app solving? How does this application solve that problem?)
+Sometimes, we feel sad. What better way to feel more joy than creating or discovering a new inspirational poster. This application allows its users to create random posters, but also customize them. The customized posters will also be stored automatically and parts of your custom poster could be displayed in the random poster selection. The posters can be both saved and deleted. 
+
 
 ### Installation Instructions:
 1. Fork and clone this repo.
