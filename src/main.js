@@ -128,16 +128,14 @@ makePosterButton.addEventListener('click', displayForm);
 takeMeBackButton.addEventListener('click', goToMain);
 showSavedButton.addEventListener('click', displaySavedPosters);
 backToMainButton.addEventListener('click', goToMain);
+savePosterButton.addEventListener('click', savePoster);
 showMyPosterButton.addEventListener('click', function(e){
   e.preventDefault();
   createOwnPoster();
 });
-savePosterButton.addEventListener('click', savePoster);
 savedPosterGrid.addEventListener('dblclick', function(event) {
   deletePoster(event)
  });
-
-
 
 // functions and event handlers go here 👇
 function getRandomIndex(array) {
@@ -158,32 +156,28 @@ function displayRandomPoster() {
   var randomTitle = titles[getRandomIndex(titles)];
   var randomQuote = quotes[getRandomIndex(quotes)];
 
-  var poster = createPoster(randomImage, randomTitle, randomQuote);
-  
-  currentPoster = poster;
+  currentPoster = createPoster(randomImage, randomTitle, randomQuote);
 
-  posterTitle.innerText = poster.title;
-  posterImage.src = poster.imageURL;
-  posterQuote.innerText = poster.quote;
+  renderPoster(currentPoster);
 }
 
 function displayForm() {
-  mainPoster.hidden = true;
+  mainPoster.classList.add('hidden');
   posterForm.classList.remove('hidden');
 }
 
 function goToMain() {
-  mainPoster.hidden = false;
+  mainPoster.classList.remove('hidden');
   posterForm.classList.add('hidden');
   savedPosterPage.classList.add('hidden');
-
-  savedPosterGrid.innerHTML = "";
 }
 
 function displaySavedPosters() {
   savedPosterGrid.innerHTML = ''
+  
   mainPoster.classList.add('hidden');
   savedPosterPage.classList.remove('hidden');
+
   for (var i = 0; i < savedPosters.length; i++) {
     savedPosterGrid.innerHTML +=
     `<article class='mini-poster' id = '${savedPosters[i].id}'>
@@ -195,17 +189,14 @@ function displaySavedPosters() {
 
 function createOwnPoster() {
   var poster = createPoster(imageInput.value, titleInput.value, quoteInput.value) 
-
   currentPoster = poster;
 
   images.push(poster.imageURL);
   titles.push(poster.title);
   quotes.push(poster.quote);
 
-  posterTitle.innerText = poster.title;
-  posterImage.src = poster.imageURL;
-  posterQuote.innerText = poster.quote;
-
+  renderPoster(currentPoster);
+  clearForm();
   goToMain();
 }
 
@@ -225,4 +216,16 @@ function deletePoster(event){
     }
   }
   displaySavedPosters()
+}
+
+function clearForm(){
+  imageInput.value = '';
+  titleInput.value = '';
+  quoteInput.value = '';
+}
+
+function renderPoster(poster){
+  posterTitle.innerText = poster.title;
+  posterImage.src = poster.imageURL;
+  posterQuote.innerText = poster.quote;
 }
