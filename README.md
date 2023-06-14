@@ -10,6 +10,8 @@ Sometimes, we feel sad. What better way to feel more joy than creating or discov
 2. Type `cd hang-in-there-pairedProject` to move into the root directory
 3. Open the webpage by typing `open index.html`
 
+-Visit app:  https://michellerv.github.io/hang-in-there-pairedProject/
+
 ### Preview of App:
 ![Screenshot of save posters page](/readme-imgs/savedposterpage.png)
 The saved posters page allows users to keep their favorite posters. They can also save the posters they created using the make your own poster form. The poster on the right is a saved unique poster that used the form to input the picture, title, and quote. 
